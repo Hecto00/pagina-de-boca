@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro Confirmado</title>
+  <style>
+    body {
+      background-color: #000066;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .registro {
+      background-color: #001f4d;
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%;
+      margin: auto;
+      border: 2px solid #ffcc00;
+    }
+
+    h1 {
+      color: #ffcc00;
+    }
+  </style>
+</head>
+<body>
+
+<h1>¡Registro Exitoso!</h1>
+<div class="registro">
+  <p><strong>Nombre:</strong> <span id="nombre"></span></p>
+  <p><strong>Apellido:</strong> <span id="apellido"></span></p>
+  <p><strong>Fecha de Nacimiento:</strong> <span id="fecha"></span></p>
+  <p><strong>Número de Teléfono:</strong> <span id="numero"></span></p>
+  <p><strong>Tipo de VIP:</strong> <span id="vip"></span></p>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  document.getElementById('nombre').textContent = params.get('nombre');
+  document.getElementById('apellido').textContent = params.get('apellido');
+  document.getElementById('fecha').textContent = params.get('fecha');
+  document.getElementById('numero').textContent = params.get('numero');
+  document.getElementById('vip').textContent = params.get('vip');
+</script>
+
+</body>
+</html>
